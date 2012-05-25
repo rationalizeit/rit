@@ -1,0 +1,12 @@
+body {
+    background: url("/assets/background-gradient.png") repeat-x fixed 0 0%, url("/assets/body-speckle.png") repeat fixed 0 0 #FAFBFC;
+    padding-top: 50px;
+}
+
+.navbar-inner {
+  background-color: #000; /* background color will be black for all browsers */
+  background-image: -moz-linear-gradient(#285C90, #184C70);
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+  margin-top: -1px;
+}
