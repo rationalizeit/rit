@@ -5,4 +5,16 @@ class PagesController < ApplicationController
     @title = "Home"
   end
   
+  def explore
+    @title = "Explore"
+  end
+  
+  def about
+    @title = "About Us"
+  end
+  
+  def community
+    @title = "Community"
+  end
+  
 end
