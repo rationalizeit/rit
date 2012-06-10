@@ -54,6 +54,7 @@ Rit::Application.routes.draw do
    match '/explore' => 'pages#explore', :as => :explore
    match '/about' => 'pages#about', :as => :about
    match '/community' => 'pages#community', :as => :community
+   #' This is the new change'
    
    
 
