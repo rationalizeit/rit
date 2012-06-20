@@ -21,19 +21,25 @@
 		          <span class="icon-bar"></span>
 		          <span class="icon-bar"></span>
 		        </a>
-		        <a class="brand" href='<% root_path %>' style="padding-bottom:4px;width:300px;">
+		        <a class="brand" href='<% main_app.root_path %>' style="padding-bottom:4px;width:300px;">
 					<!-- <img width="60" height="27" align="absmiddle" alt="Better Business Analysis" src="/assets/logo.gif"> -->
 					<img width="27" height="20" align="absmiddle" src="http://www.logomaker.com/logo-images/9ac92c4b6c2124fc.gif"/>
 					<font color="black"><b>Better Business Analysis</b></font>
 		    	</a>
 		        <div class="nav-collapse">
-				<div id="fontsizer"></div>
-		          <ul class="nav">
-					<li><%= ilink_to "home", "Home", root_path %></li>
-					<li><%= ilink_to "user", "Explore", explore_path %></li>
-					<li><%= ilink_to "film", "Learn", courses_path %></li>
-					<li><%= ilink_to "zoom-in", "About", about_path %></li>
-					<li><%= ilink_to "inbox", "Community", community_path %></li>
+              <div id="fontsizer"></div>
+		      <ul class="nav">
+					<li><%= ilink_to "home", "Home", main_app.root_path %></li>
+					<li><%= ilink_to "user", "Explore", main_app.explore_path  %></li>
+					<li><%= ilink_to "film", "Learn", main_app.courses_path %></li>
+					<li><%= ilink_to "zoom-in", "About", main_app.about_path %></li>
+          <li><%= ilink_to "inbox", "Community", main_app.community_path  %></li>
+          <% unless user_signed_in? %>
+            <li><%= ilink_to "signin", "Login", main_app.new_user_session_path %></li>
+            <li><%= ilink_to "home", "Register", main_app.new_user_registration_path %></li>
+          <% else %>
+            <li><%= ilink_to "signout", "Logout", main_app.destroy_user_session_path , :method => :delete %></li>
+          <% end %>
 		          </ul>
 		        </div>
 		      </div>

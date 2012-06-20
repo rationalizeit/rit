@@ -5,7 +5,8 @@ source 'http://rubygems.org'
 gem 'rails',  '3.2.1'
 
 gem 'sqlite3'
-
+gem 'mysql'
+gem 'cucumber'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,6 +18,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'forem', :git => "git://github.com/radar/forem.git"
+gem 'forem-theme-base', :git => "git://github.com/radar/forem-theme-base"
+gem 'will_paginate'
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,6 +44,10 @@ gem "backbone-on-rails"
 # To use simple form
 gem "simple_form"
 gem 'debugger'
+gem 'powder'
+gem 'forgery'
+gem 'populator'
+gem 'google-checkout'
 
 # To use font awesome
 

@@ -1,1 +1,5 @@
-	<%= render 'unregistered' %>
+<% if user_signed_in? %>
+  <%= render 'registered' %>
+<% else %>
+  <%= render 'unregistered' %>
+<% end %>
