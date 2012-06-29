@@ -12,8 +12,18 @@ development:
   pool: 5
   timeout: 5000
 
+test: &test
+  adapter: mysql
+  database: rit_test
+  password: password
+  pool: 5
+  timeout: 5000
+
 production:
   adapter: sqlite3
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+cucumber:
+  <<: *test

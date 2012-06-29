@@ -38,6 +38,7 @@ module Rit
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    # config.active_record.whitelist_attributes = false
 
     # Enable the asset pipeline
     config.assets.enabled = true
@@ -45,5 +46,9 @@ module Rit
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    # Machinist must automatically add a blueprint when generating a model
+     config.generators do |g|
+       g.fixture_replacement :machinist
+     end
   end
 end

@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120619130600) do
+ActiveRecord::Schema.define(:version => 20120627171445) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
     t.decimal  "price",      :precision => 10, :scale => 0
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+    t.integer  "user_id"
   end
 
   create_table "forem_categories", :force => true do |t|
@@ -106,6 +107,23 @@ ActiveRecord::Schema.define(:version => 20120619130600) do
   add_index "forem_views", ["updated_at"], :name => "index_forem_views_on_updated_at"
   add_index "forem_views", ["user_id"], :name => "index_forem_views_on_user_id"
   add_index "forem_views", ["viewable_id"], :name => "index_forem_views_on_topic_id"
+
+  create_table "lessons", :force => true do |t|
+    t.string   "name"
+    t.integer  "course_id"
+    t.string   "course_day"
+    t.string   "video"
+    t.string   "quiz"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "registrations", :force => true do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",               :null => false

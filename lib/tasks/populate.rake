@@ -14,5 +14,12 @@ namespace :db do
       person.email = 'test' + i.to_s + '@rit.com' 
       person.save
   end
+
+    5.times do |c|
+      course = Course.new
+      course.name = "Course-#{c}"
+      course.price = 549
+      course.save
+    end
  end
 end

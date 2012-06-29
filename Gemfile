@@ -6,7 +6,6 @@ gem 'rails',  '3.2.1'
 
 gem 'sqlite3'
 gem 'mysql'
-gem 'cucumber'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -43,7 +42,6 @@ gem "backbone-on-rails"
 
 # To use simple form
 gem "simple_form"
-gem 'debugger'
 gem 'powder'
 gem 'forgery'
 gem 'populator'
@@ -55,4 +53,16 @@ gem 'google-checkout'
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'machinist'
+  gem 'faker'
+  gem 'fuubar'
+  gem 'cucumber'
+  gem 'spork'
+  gem 'cucumber-rails'
+  gem 'launchy'
+  gem 'database_cleaner'
 end
+
+gem 'debugger', :group => [:test, :development]

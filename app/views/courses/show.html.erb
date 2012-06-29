@@ -7,6 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @course.price %></dd>
 </dl>
+<%= link_to 'Enroll in Course',course_path, :class => 'btn', :id => 'Enroll in Course' %>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

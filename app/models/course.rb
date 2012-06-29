@@ -1,4 +1,7 @@
 class Course < ActiveRecord::Base
+  has_many :registrations
+  has_many :users, :through => :registrations
+  has_many :lessons
   validates_presence_of :name, :price, :message => "can't be blank"
   MERCHANT_ID = 368578617175864
   MERCHANT_KEY = 'zKSnCdZXULVoRQ6Vf77JwQ'
