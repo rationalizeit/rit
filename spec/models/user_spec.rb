@@ -20,5 +20,16 @@ describe User do
       #     lambda   {@user.register_for(@course)}.should change(@users, :courses).from([]).to([@course])
     end
   end
+  context "Authentication" do
+    it "should find users by their emails or their usernames" do
+      email_warden_conditions = {"login"=>"test0@rit.com"}
+      username_warden_conditions = {"login" => "Tester Khan"}
+      u = User.make(@valid_attributes)
+      User.find_first_by_auth_conditions(email_warden_conditions).should == u 
+      User.find_first_by_auth_conditions(username_warden_conditions).should == u 
+
+    end
+
+  end
 end
 
