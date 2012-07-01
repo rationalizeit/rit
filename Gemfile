@@ -65,4 +65,4 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'debugger', :group => [:test, :development]
+gem 'debugger'
