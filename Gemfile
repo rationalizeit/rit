@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead:
-gem 'rails',  '3.2.1'
+gem 'rails',  '3.2.6'
 
 gem 'sqlite3'
 gem 'mysql'
